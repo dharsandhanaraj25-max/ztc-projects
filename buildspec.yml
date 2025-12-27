@@ -5,9 +5,18 @@ phases:
     commands:
       - echo Installing dependencies
   build:
-      commands:
+    commands:
+      - echo "Current directory:"
+      - pwd
+      - echo "Listing contents of the current directory:"
+      - ls
+      - echo "Listing contents of project-3 directory:"
+      - ls projects/cloud-support-engineer-projects/project-3
+      - echo "Changing to globalmart-catalog directory..."
       - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog
-      - ls # Optional: Check if package.json exists in this directory
+      - echo "Listing contents of globalmart-catalog directory:"
+      - ls
+      - echo "Running npm install..."
       - npm install
 artifacts:
   files:
