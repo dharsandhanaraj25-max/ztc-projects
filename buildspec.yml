@@ -3,20 +3,17 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20  # Recommended for better npm compatibility
-    commands:
-      - echo "Installing dependencies..."
+      nodejs: 20
   pre_build:
     commands:
       - echo "Navigating to project directory..."
-      # We skip 'ztc-projects' because that IS the root directory
       - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog
   build:
     commands:
-      - echo "Current directory: $(pwd)"
+      - echo "Current directory is $(pwd)"
       - npm install
 artifacts:
-  # This ensures your build output doesn't have 5 layers of empty folders
   base-directory: 'projects/cloud-support-engineer-projects/project-3/globalmart-catalog'
   files:
     - '**/*'
+    - 'appspec.yml'
