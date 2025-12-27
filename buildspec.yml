@@ -6,8 +6,7 @@ phases:
       - echo Installing dependencies
   build:
     commands:
-      - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog
-      - npm install
+      - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog && npm install
 artifacts:
   files:
     - '**/*'
