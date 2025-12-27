@@ -11,11 +11,11 @@ phases:
       - echo "Listing contents of the current directory:"
       - ls
       - echo "Listing contents of project-3 directory:"
-      - ls projects/cloud-support-engineer-projects/project-3
+      - ls projects/cloud-support-engineer-projects/project-3 || echo "Directory not found!"
       - echo "Changing to globalmart-catalog directory..."
-      - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog
+      - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog || exit 1
       - echo "Listing contents of globalmart-catalog directory:"
-      - ls
+      - ls || echo "Directory not found!"
       - echo "Running npm install..."
       - npm install
 artifacts:
