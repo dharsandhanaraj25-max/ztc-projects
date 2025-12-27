@@ -8,12 +8,20 @@ phases:
     commands:
       - echo "Current directory:"
       - pwd
-      - echo "Listing contents of the current directory:"
+      - echo "Listing contents of the root directory:"
       - ls
+      - echo "Listing contents of ztc-projects directory:"
+      - ls ztc-projects
+      - echo "Listing contents of projects directory:"
+      - ls ztc-projects/projects
+      - echo "Listing contents of cloud-support-engineer-projects directory:"
+      - ls ztc-projects/projects/cloud-support-engineer-projects
       - echo "Listing contents of project-3 directory:"
-      - ls projects/cloud-support-engineer-projects/project-3 || echo "Directory not found!"
+      - ls ztc-projects/projects/cloud-support-engineer-projects/project-3
+      - echo "Listing contents of globalmart-catalog directory:"
+      - ls ztc-projects/projects/cloud-support-engineer-projects/project-3/globalmart-catalog
       - echo "Changing to globalmart-catalog directory..."
-      - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog || exit 1
+      - cd ztc-projects/projects/cloud-support-engineer-projects/project-3/globalmart-catalog || exit 1
       - echo "Listing contents of globalmart-catalog directory:"
       - ls || echo "Directory not found!"
       - echo "Running npm install..."
