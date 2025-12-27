@@ -9,8 +9,12 @@ phases:
       - echo "Navigating to app directory..."
       - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog
       - npm install
+      - npm run build
+      # FIX: Ensure scripts are executable for CodeDeploy
+      - chmod +x scripts/*.sh
 artifacts:
-  # This base-directory ensures only the app content is sent to CodeDeploy
   base-directory: 'projects/cloud-support-engineer-projects/project-3/globalmart-catalog'
   files:
-    - '**/*'
+    - 'build/**/*'      # The React static files
+    - 'scripts/**/*'    # The deployment scripts
+    - 'appspec.yml'     # The instruction file
