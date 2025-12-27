@@ -3,13 +3,14 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20
+      nodejs: 20  # Use the latest supported version for compatibility
   build:
     commands:
       - echo "Navigating to app directory..."
       - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog
       - npm install
 artifacts:
+  # This base-directory ensures only the app content is sent to CodeDeploy
   base-directory: 'projects/cloud-support-engineer-projects/project-3/globalmart-catalog'
   files:
     - '**/*'
