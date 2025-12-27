@@ -5,8 +5,10 @@ phases:
     commands:
       - echo Installing dependencies
   build:
-    commands:
-      - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog && npm install
+      commands:
+      - cd projects/cloud-support-engineer-projects/project-3/globalmart-catalog
+      - ls # Optional: Check if package.json exists in this directory
+      - npm install
 artifacts:
   files:
     - '**/*'
